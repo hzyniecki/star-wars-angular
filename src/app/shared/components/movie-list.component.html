@@ -11,7 +11,7 @@
     <div *ngIf="selectedMovie">
       <div class="title">{{selectedMovie.title}}</div>
       <div class="description">{{ selectedMovie.opening_crawl }}</div>
-      <div class="release_date">{{selectedMovie.release_date.slice(5).replace('-','/') + "/" + selectedMovie.release_date.slice(0,4)}}</div>
+      <div class="release_date">{{selectedMovie.release_date | date:'MM/dd/yyyy'}}</div>
     </div>
 
   </div>
