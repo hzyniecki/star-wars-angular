@@ -18,7 +18,6 @@ export class MovieService {
 
   public getMovies(): Observable<Movie[]> {
     if (!this.movies$) {
-      console.log( this.loading)
       this.movies$ = this.http.get<MoviesApiResponse>(this.apiUrl).pipe(
         map((response) =>  response.results),
         catchError((error: any) => {
